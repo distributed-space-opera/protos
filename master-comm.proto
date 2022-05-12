@@ -48,6 +48,7 @@ message ReplicationDetailsRequest {
 message ReplicationDetailsResponse {
 //  TODO if status of success or failure is needed, then consider adding
 //  repeated string nodeips = 1;
+  Status status = 1;
 }
 
 // The request message containing the IP address of the new Node that joined the network
