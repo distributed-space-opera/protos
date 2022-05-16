@@ -26,8 +26,9 @@ message Request {
 }
 
 message Reply {
-  string message = 1; // Will return ERROR or SUCCESS
-  string token = 2; // Valid for 1 hour
+  string masterip = 1;
+  string message = 2; // Will return ERROR or SUCCESS
+  string token = 3; // Valid for 1 hour
 }
 
 message UploadRequest {
