@@ -32,9 +32,10 @@ message Reply {
 }
 
 message UploadRequest {
-  string filename = 1;
-  int64 filesize = 2; // in bytes
-  string token = 3;
+  string client_ip = 1;
+  string filename = 2;
+  int64 filesize = 3; // in bytes
+  string token = 4;
 }
 
 message UploadResponse {
@@ -43,8 +44,9 @@ message UploadResponse {
 }
 
 message DownloadRequest{
-  string filename = 1;
-  string token = 2;
+  string client_ip = 1;
+  string filename = 2;
+  string token = 3;
 }
 
 message DownloadResponse{
