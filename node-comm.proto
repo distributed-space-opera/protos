@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+import "master-comm.proto";
 option java_multiple_files = true;
 option java_package = "org.node.protos";
 //option java_outer_classname = "StreamProto";
@@ -11,18 +12,9 @@ service NodeReplication {
   rpc CreateReplica (stream CreateReplicaRequest) returns (CreateReplicaReply) {}
 }
 
-enum Status {
-  SUCCESS = 0;
-  FAILURE = 1;
-}
-
 message ReplicateFileRequest {
   string filename = 1;
   repeated string nodeips = 2;
-}
-
-message StatusResponse {
-  Status status = 1;
 }
 
 // The request message containing the user's name.
