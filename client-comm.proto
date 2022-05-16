@@ -34,5 +34,6 @@ message DownloadFileRequest {
 // The response message containing the greetings
 message DownloadFileReply {
   bytes payload = 2;
+  string error = 1;
 }
 
